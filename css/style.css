@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+
+header {
+    padding: 1rem 1rem;
+    background-color: #fff;
+}
+
+header h1 {
+    grid-column: span 6;
+}
+
+header nav {
+    grid-column: auto / span 6;
+    justify-self: end;
+}
