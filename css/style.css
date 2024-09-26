@@ -17,10 +17,21 @@ header {
 }
 
 header h1 {
-    grid-column: span 6;
+    grid-column: 6 /span 9;
+}
+
+li {
+    display: grid;
+    justify-self: center;
+
 }
 
 header nav {
-    grid-column: auto / span 6;
-    justify-self: end;
+    grid-column: 6 / span 9;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
 }
