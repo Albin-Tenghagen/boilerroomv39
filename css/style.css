@@ -1,37 +1,78 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: grey;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 1fr;
     gap: 1rem;
-}
-
-header {
-    padding: 1rem 1rem;
-    background-color: #fff;
-}
-
-header h1 {
-    grid-column: 6 /span 9;
-}
-
-li {
-    display: grid;
-    justify-self: center;
-
+    text-align: center;
 }
 
 header nav {
-    grid-column: 6 / span 9;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #848484;
+}
+
+nav li {
+    border: 1px solid #000;
+    margin: 10px;
+    padding: .3rem 1rem;;
+}
+
+nav ul {
+    text-decoration: none;
+    list-style: none;
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
+}
+
+#hero-img {
+   width: clamp(30%, 70%, 90%);
+}
+
+
+
+
+
+
+.best-sellers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.best-sellers article {
+    flex-grow: 1;
+    flex-basis: 45%;
+}
+
+.best-sellers img {
+    width: clamp(30%, 70%, 90%);
+}
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #848484;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.logo-bottom {
+    width: 20%;
 }
