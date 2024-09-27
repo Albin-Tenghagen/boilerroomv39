@@ -22,12 +22,16 @@ header nav {
 nav li {
     border: 1px solid #000;
     margin: 10px;
-    padding: .3rem 1rem;;
+    padding: .3rem 1rem;
+
 }
 
+
+/* jag la till padding 0 för den hade padding 40 på vänster sida av någon anledning annars. */
 nav ul {
     text-decoration: none;
     list-style: none;
+    padding: 0;
 }
 
 nav a {
@@ -39,8 +43,19 @@ nav a {
    width: clamp(30%, 70%, 90%);
 }
 
+/* lades till aside och aside a */
+aside {
+    display:flex;
+    justify-content: center;
+}
 
-
+aside a {
+    text-decoration: none;
+    margin: 10px;
+    color: #000000;
+    border: 1px solid #000;
+    padding: .3rem 1rem;
+}
 
 
 
@@ -52,16 +67,18 @@ nav a {
     text-align: center;
 }
 
+
+/* här är flex: 1 1 45% samma sak som flex:growth 1; flex:shrink 1; flex-basis: 45%; */
 .best-sellers article {
-    flex-grow: 1;
-    flex-basis: 45%;
+    flex: 1 1 40%;
+
 }
 
 .best-sellers img {
     width: clamp(30%, 70%, 90%);
+    height: clamp(15rem, 20rem, 25rem);
+    /* här va vi tvugna att använda rem istället för % då våra bilder hade olika heights. Det fick texten under att bli ojämn med andra produkter. */
 }
-
-
 
 
 
