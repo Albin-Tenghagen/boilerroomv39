@@ -99,11 +99,13 @@ aside ul {
 
 .best-sellers-home article{
     flex: 1 1 40%;
+    
 }
 
 .best-sellers-home article img{
     width: clamp(30%, 50%, 70%);
     height: 252px;
+    
 }
 .best-sellers {
     display: flex;
@@ -112,12 +114,14 @@ aside ul {
     align-items: center;
     text-align: center;
     margin-top: .8rem;
+    
+    
 }
 
 
 /* här är flex: 1 1 45% samma sak som flex:growth 1; flex:shrink 1; flex-basis: 45%; */
 .best-sellers article {
-flex: 1 1 40%;
+
 }
 
 .best-sellers img {
@@ -144,6 +148,9 @@ footer {
 
 
 @media (min-width:426px) {
+    .best-sellers {
+        justify-content: start;
+    }
     .best-sellers article {
         flex-basis: calc(33.33% - 10px); /* Adjusts width to 3 images per row, minus the gap */
     }
