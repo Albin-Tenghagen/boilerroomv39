@@ -102,19 +102,46 @@ footer {
 
 
 @media (min-width: 425px) and (max-width: 1000px) {
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        text-align: center;
-    }
+
 }
 
-@media (min-width:1001) {
+@media (min-width:1001px) {
     .best-sellers {
+        flex-wrap: nowrap;
+
     }
-    .best-sellers article {
-        flex: 1 1 25%
-        
+
+
+    header {
+        display: flex;
+    }
+
+
+    header nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #848484;
+
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+
+    }
+    nav a{
+
+        text-align: center;
+
+    }
+
+    nav img{
+        margin-left: auto 0 ;
+    }
+
+   
+    .best-sellers-article  {
+        flex: 1 1 25%;
+
     }
 }
