@@ -99,3 +99,22 @@ footer {
 .logo-bottom {
     width: 20%;
 }
+
+
+@media (min-width: 425px) and (max-width: 1000px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+@media (min-width:1001) {
+    .best-sellers {
+    }
+    .best-sellers article {
+        flex: 1 1 25%
+        
+    }
+}
