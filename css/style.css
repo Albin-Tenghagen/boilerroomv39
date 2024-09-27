@@ -28,7 +28,7 @@ header nav {
 }
 
 #logotyp {
-    width: 10%;
+    width: 25%;
 }
 
 nav li {
@@ -75,6 +75,19 @@ aside a {
     padding: .3rem .5rem;
 }
 
+aside ul {
+    text-decoration: none;
+    margin: 10px;
+    color: #000000;
+    padding: .3rem .5rem;
+    display:flex;
+    justify-content: center;
+
+    list-style-type: none;
+}
+
+
+
 
 
 .best-sellers {
@@ -94,6 +107,7 @@ flex: 1 1 40%;
 
 .best-sellers img {
     width: clamp(30%, 70%, 90%);
+    height: 252px;
     /* height: clamp(15%, 20%, 25%); */
     /* här va vi tvugna att använda rem istället för % då våra bilder hade olika heights. Det fick texten under att bli ojämn med andra produkter. */
 }
@@ -113,18 +127,21 @@ footer {
 }
 
 
-@media (min-width: 425px) and (max-width: 1000px) {
 
-}
-
-@media (min-width:1001px) {
+@media (min-width:425px) {
     .best-sellers {
         flex-wrap: nowrap;
 
+
     }
     .best-sellers-article  {
-        flex: 1 1 25%;
 
+        /* word-break: break-all; */
+    }
+
+    .best-sellers article img {
+        height: 252px ;
+        width: clamp(30%, 70%, 90%);
     }
 
 
@@ -150,17 +167,21 @@ footer {
     nav ul {
         display: flex;
         justify-content: space-around;
+        margin-right: 1%;
     }
 
     #logotyp {
-        width: 10%;
+        width: clamp(12%, 13%, 15%);
         margin-right: auto;
+        margin-left: 1%;
     }
 
     
     .logo-bottom {
         width: 10%;
     }
+
+
 
 
 
