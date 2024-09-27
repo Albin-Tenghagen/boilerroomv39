@@ -52,7 +52,7 @@ nav a {
 }
 
 #hero-img {
-   width: clamp(30%, 70%, 90%);
+   width: clamp(50%, 70%, 90%);
 }
 
 .index-article p {
@@ -88,8 +88,23 @@ aside ul {
 
 
 
+.best-sellers-home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: .8rem;
+}
 
+.best-sellers-home article{
+    flex: 1 1 40%;
+}
 
+.best-sellers-home article img{
+    width: clamp(30%, 50%, 70%);
+    height: 252px;
+}
 .best-sellers {
     display: flex;
     flex-wrap: wrap;
@@ -128,23 +143,14 @@ footer {
 
 
 
-@media (min-width:425px) {
-    .best-sellers {
-        flex-wrap: nowrap;
-
-
+@media (min-width:426px) {
+    .best-sellers article {
+        flex-basis: calc(33.33% - 10px); /* Adjusts width to 3 images per row, minus the gap */
     }
-    .best-sellers-article  {
-
-        /* word-break: break-all; */
-    }
-
     .best-sellers article img {
         height: 252px ;
-        width: clamp(30%, 70%, 90%);
+
     }
-
-
     header.headergrid {
         display: flex;
         flex-direction: column;
@@ -161,32 +167,24 @@ footer {
         padding: 0;
         margin: 0;
     }
-
-
-
     nav ul {
         display: flex;
         justify-content: space-around;
         margin-right: 1%;
     }
-
     #logotyp {
         width: clamp(12%, 13%, 15%);
         margin-right: auto;
         margin-left: 1%;
     }
-
-    
     .logo-bottom {
         width: 10%;
     }
+}
 
-
-
-
-
-
-
-   
+@media (min-width:1024px) {
+    .best-sellers article {
+        flex-basis: calc(25% - 10px); /* Adjusts width to 3 images per row, minus the gap */
+    }
 
 }
