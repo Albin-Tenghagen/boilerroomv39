@@ -43,17 +43,23 @@ nav a {
    width: clamp(30%, 70%, 90%);
 }
 
+.index-article p {
+    padding: 0.4rem 1rem;
+}
+
 /* lades till aside och aside a */
 aside {
     display:flex;
     justify-content: center;
+    border: solid black 1px;
+    margin: 1rem;
 }
 
 aside a {
     text-decoration: none;
     margin: 10px;
     color: #000000;
-    border: 1px solid #000;
+
     padding: .3rem 1rem;
 }
 
@@ -65,6 +71,10 @@ aside a {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+img {
+    mix-blend-mode: multiply;
 }
 
 
