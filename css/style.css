@@ -52,7 +52,8 @@ nav a {
 }
 
 #hero-img {
-   width: clamp(50%, 70%, 90%);
+    /* Resize så påverkar clamp så att bilden inte blir för stor eller liten. */
+   width: clamp(30%, 50%, 70%);
 }
 
 .index-article p {
@@ -86,7 +87,7 @@ aside ul {
     list-style-type: none;
 }
 
-
+/* specifierade classen i index.html så att den inte påverkar andra .best-sellers class. */
 
 .best-sellers-home {
     display: flex;
@@ -104,6 +105,7 @@ aside ul {
 
 .best-sellers-home article img{
     width: clamp(30%, 50%, 70%);
+   /* Alla bilder får fixed height, så det passar och ser finare ut. */
     height: 252px;
     
 }
@@ -118,11 +120,6 @@ aside ul {
     
 }
 
-
-/* här är flex: 1 1 45% samma sak som flex:growth 1; flex:shrink 1; flex-basis: 45%; */
-.best-sellers article {
-
-}
 
 .best-sellers img {
     width: clamp(30%, 70%, 90%);
@@ -160,12 +157,14 @@ footer {
     }
     header.headergrid {
         display: flex;
-        flex-direction: column;
+        /* ändrade flex-direction till column för att den ska ta hela bredden och det funkar fint eftersom det endast är en column. */
+        flex-direction: column; 
         padding: 0;
         margin: 0;
     }
     header nav {
         display: flex;
+        /* flex-direction row så att meny knapparna håller sig i position */
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -177,15 +176,17 @@ footer {
     nav ul {
         display: flex;
         justify-content: space-around;
+        /* margin-right 1% så att den inte fastnar vid höger kant, det ska se snyggt ut. */
         margin-right: 1%;
     }
     #logotyp {
         width: clamp(12%, 13%, 15%);
         margin-right: auto;
+                /* margin-right 1% så att den inte fastnar vid vänster kant, det ska se snyggt ut. */
         margin-left: 1%;
     }
     .logo-bottom {
-        width: 10%;
+        width: clamp(9%, 10%, 11%);
     }
 }
 
