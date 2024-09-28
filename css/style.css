@@ -29,11 +29,14 @@ body {
     text-align: center;
 }
 
-.contact-grid2 {
-    display: grid;
-    grid-template-columns: 1fr;
+.contact-map {
     gap: 1rem;
     text-align: center;
+}
+
+.googlemap {
+    width: 100%;
+
 }
 
 header nav {
@@ -47,6 +50,13 @@ header nav {
 
 h1 {
     text-align: center;
+    font-size: clamp(1.5rem, 1.7rem, 2rem);
+
+
+}
+
+h3 {
+    font-size: clamp(10px, 12px, 20px);
 }
 
 p {
@@ -143,6 +153,7 @@ aside ul {
     align-items: center;
     text-align: center;
     margin-top: .8rem;
+    margin-bottom: .8rem;
     gap: .4rem;
 }
 
@@ -156,6 +167,8 @@ aside ul {
     /* height: clamp(15%, 20%, 25%); */
     /* här va vi tvugna att använda rem istället för % då våra bilder hade olika heights. Det fick texten under att bli ojämn med andra produkter. */
 }
+
+
 
 
 
@@ -176,9 +189,10 @@ footer {
 @media (min-width:426px) {
     .best-sellers {
         justify-content: start;
+
     }
     .best-sellers article {
-        flex-basis: calc(33.33% - 10px); /* Adjusts width to 3 images per row, minus the gap */
+        flex-basis: calc(33.33% - 4.5px); /* Adjusts width to 3 images per row, minus the gap */
     }
     .best-sellers article img {
         height: 252px ;
@@ -240,30 +254,26 @@ footer {
         font-size: clamp(.6rem, .7rem, 1.5rem);
     }
  
-    
-    .contact-grid2 {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        text-align: center;
-    }
+
+        /* adjusts layout width, giving it margin on all fours sides */
+        main {
+            width: 90vw;
+            margin: 5% auto;
+        }
 }
 
 
 
 @media (min-width:1024px) {
     .best-sellers article {
-        flex-basis: calc(25% - 10px); /* Adjusts width to 3 images per row, minus the gap */
+        flex-basis: calc(25% - 5px); /* Adjusts width to 3 images per row, minus the gap */
     }
     #hero-img {
         /* Resize så påverkar clamp så att bilden inte blir för stor eller liten. */
        width: clamp(75%, 80%, 90%);
     }
 
-    h1 {
-        font-size: clamp(1.5rem, .7rem, 2rem);
 
-    }
     
     /* adjusts layout width, giving it margin on all fours sides */
     main {
@@ -293,12 +303,10 @@ footer {
         font-size: clamp(.6rem, .7rem, 1.5rem);
     }
  
+    .googlemap {
+        width: 70%;
     
-    .contact-grid2 {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        text-align: center;
     }
+    
 
 }
