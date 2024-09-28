@@ -129,6 +129,7 @@ aside ul {
     margin-top: .8rem;
     gap: 0.7rem;
     padding: 2rem;
+
 }
 
 .best-sellers-home article{
@@ -186,14 +187,31 @@ footer {
 
 
 
-@media (min-width:426px) {
+@media (min-width:426px) and (max-width:768px){
+    .best-sellers-home {
+        justify-content: start;
+        padding: 0;
+    }
+    .best-sellers-home article {
+    }
+
+    .best-sellers-home article img {
+
+        /* la till fixed height så att den kan hålla två bilder/rad i best-sellers-home sidan. det ser ok ut med ungefär 10rem tills 768px screens */
+        height: 10rem;
+        width: 10rem;
+        
+    }
+
+
     .best-sellers {
         justify-content: start;
 
     }
     .best-sellers article {
-        flex-basis: calc(33.33% - 4.5px); /* Adjusts width to 3 images per row, minus the gap */
+        flex-basis: calc(50% - 4.5px); /* Adjusts width to 3 images per row, minus the gap */
     }
+    
     .best-sellers article img {
         height: 252px ;
 
@@ -263,8 +281,96 @@ footer {
 }
 
 
+@media (min-width:769px) and (max-width:1024px){
 
-@media (min-width:1024px) {
+    .best-sellers {
+        justify-content: start;
+
+    }
+    .best-sellers article {
+        flex-basis: calc(33.33% - 4.5px); /* Adjusts width to 3 images per row, minus the gap */
+    }
+    .best-sellers article img {
+        height: 252px ;
+
+    }
+
+header.headergrid {
+    display: flex;
+    /* ändrade flex-direction till column för att den ska ta hela bredden och det funkar fint eftersom det endast är en column. */
+    flex-direction: column; 
+    padding: 0;
+    margin: 0;
+}
+header nav {
+    display: flex;
+    /* flex-direction row så att meny knapparna håller sig i position */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #848484;
+    padding: 0;
+    margin: 0;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    /* margin-right 1% så att den inte fastnar vid höger kant, det ska se snyggt ut. */
+    margin-right: 1%;
+}
+nav a {
+    width: clamp(15%, 20%, 25%);
+    margin-right: auto;
+}
+
+.logo-bottom {
+    width: clamp(9%, 10%, 11%);
+}
+
+.contact-header {
+    grid-column: auto / span 6;
+}
+.index-article {
+    grid-column: auto / span 2;
+    justify-self: center;
+}
+.index-article-bottom { 
+    grid-column: auto / span 3;
+    width: 75%;
+    justify-self: center;
+}
+
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto 1fr 1fr;
+    gap: 1rem;
+    text-align: center;
+    font-size: clamp(.6rem, .7rem, 1.5rem);
+}
+
+
+    /* adjusts layout width, giving it margin on all fours sides */
+    main {
+        width: 90vw;
+        margin: 5% auto;
+    }
+
+}
+
+
+@media (min-width:1025px) {
+
+    .best-sellers {
+        justify-content: start;
+    }
+    .best-sellers article img {
+        height: 252px ;
+
+    }
+
     .best-sellers article {
         flex-basis: calc(25% - 5px); /* Adjusts width to 3 images per row, minus the gap */
     }
@@ -273,6 +379,35 @@ footer {
        width: clamp(75%, 80%, 90%);
     }
 
+
+    header.headergrid {
+        display: flex;
+        /* ändrade flex-direction till column för att den ska ta hela bredden och det funkar fint eftersom det endast är en column. */
+        flex-direction: column; 
+        padding: 0;
+        margin: 0;
+    }
+    header nav {
+        display: flex;
+        /* flex-direction row så att meny knapparna håller sig i position */
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #848484;
+        padding: 0;
+        margin: 0;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        /* margin-right 1% så att den inte fastnar vid höger kant, det ska se snyggt ut. */
+        margin-right: 1%;
+    }
+    nav a {
+        width: clamp(15%, 20%, 25%);
+        margin-right: auto;
+    }
 
     
     /* adjusts layout width, giving it margin on all fours sides */
