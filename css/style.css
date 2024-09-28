@@ -86,10 +86,6 @@ aside ul {
     list-style-type: none;
 }
 
-
-
-
-
 .best-sellers {
     display: flex;
     flex-wrap: wrap;
@@ -100,14 +96,19 @@ aside ul {
 }
 
 
+.best-sellers-article h3 {
+    font-size: clamp(1rem, 1em, 2rem); 
+}
+
+
 /* här är flex: 1 1 45% samma sak som flex:growth 1; flex:shrink 1; flex-basis: 45%; */
 .best-sellers article {
-flex: 1 1 40%;
+    flex: 1 1 50%;
 }
 
 .best-sellers img {
     width: clamp(30%, 70%, 90%);
-    height: 252px;
+    height: 100%;
     /* height: clamp(15%, 20%, 25%); */
     /* här va vi tvugna att använda rem istället för % då våra bilder hade olika heights. Det fick texten under att bli ojämn med andra produkter. */
 }
@@ -128,20 +129,37 @@ footer {
 
 
 
-@media (min-width:425px) {
+@media (min-width:425px) { 
     .best-sellers {
+        /* max-width: 95vw;
+        margin: 0.5rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px; */
         flex-wrap: nowrap;
 
-
+        
     }
+
     .best-sellers-article  {
 
+        /* box-shadow: 1px 1px 6px rgba(0,0,0, 0.5); */
         /* word-break: break-all; */
     }
 
+    
+
     .best-sellers article img {
-        height: 252px ;
         width: clamp(30%, 70%, 90%);
+        height: auto;
+    }
+
+    aside {
+        position: sticky;
+        top: 0;
+        padding: .2rem 0.1rem;
+        background-color: #ffffff;
+        color: #f1f1f1;
     }
 
 
@@ -150,6 +168,7 @@ footer {
         flex-direction: column;
         padding: 0;
         margin: 0;
+
     }
     header nav {
         display: flex;
@@ -161,8 +180,6 @@ footer {
         padding: 0;
         margin: 0;
     }
-
-
 
     nav ul {
         display: flex;
@@ -176,7 +193,6 @@ footer {
         margin-left: 1%;
     }
 
-    
     .logo-bottom {
         width: 10%;
     }
