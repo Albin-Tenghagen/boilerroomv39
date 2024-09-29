@@ -192,8 +192,7 @@ footer {
         justify-content: start;
         padding: 0;
     }
-    .best-sellers-home article {
-    }
+    
 
     .best-sellers-home article img {
 
@@ -222,6 +221,10 @@ footer {
         flex-direction: column; 
         padding: 0;
         margin: 0;
+    }
+
+    #logotyp {
+        width: 60%;
     }
     header nav {
         display: flex;
@@ -293,6 +296,10 @@ footer {
     .best-sellers article img {
         height: 252px ;
 
+    }
+
+    #logotyp {
+        width: 70%;
     }
 
 header.headergrid {
@@ -378,7 +385,9 @@ nav a {
         /* Resize så påverkar clamp så att bilden inte blir för stor eller liten. */
        width: clamp(75%, 80%, 90%);
     }
-
+    #logotyp {
+        width: 65%;
+    }
 
     header.headergrid {
         display: flex;
