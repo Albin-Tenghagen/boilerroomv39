@@ -179,6 +179,7 @@ footer {
     background-color: #848484;
     color: white;
     padding: 2rem 1rem;
+    align-items: center;
 }
 
 .logo-bottom {
@@ -251,7 +252,7 @@ footer {
     .logo-bottom {
         width: clamp(9%, 10%, 11%);
     }
-
+        /* Detta skapar en grid layout där huvudrubriker */
     .contact-header {
         grid-column: auto / span 6;
     }
