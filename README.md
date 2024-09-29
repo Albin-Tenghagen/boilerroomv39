@@ -8,3 +8,9 @@ CSN Flödesschema Registeringssystem
 6. Webbserver skickar svaret vidare tillbaka till API. 
 7. API Skickar svaret till frontend (CSN). 
 8. Beroende på resultat så lyckas man med registerationen eller ej.
+
+
+
+Dokumentation länk
+
+https://docs.google.com/document/d/1WpbbLn7QO0syl37H1HbiYXyS_Z_2twLYjjQqFhZ7s_g/edit
